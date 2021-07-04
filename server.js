@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const PORT = process.env.PORT || 6000;
 const connectDB = require('./config/db');
@@ -7,7 +8,8 @@ const loginUser = require('./routes/api/loginUser');
 const app = express();
 
 //MongoDB Connection
-connectDB().then(r => r);
+connectDB().then(() => console.log('MongoDB Connected...'));
+
 //Middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
