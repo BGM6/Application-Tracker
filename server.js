@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 6000;
 const connectDB = require('./config/db');
 const registerUser = require('./routes/api/registerUser');
 const loginUser = require('./routes/api/loginUser');
+const deleteUser = require('./routes/api/deleteUser');
 
 const app = express();
 
@@ -14,7 +15,8 @@ connectDB().then(() => console.log('MongoDB Connected...'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.use('/api/user', registerUser);
-app.use('/api/user', loginUser);
+app.use('/api/users', registerUser);
+app.use('/api/users', loginUser);
+app.use('/api/users', deleteUser)
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));
