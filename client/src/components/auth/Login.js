@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Login = () => {
 	return (
-		<React.Fragment>
+		<div className="container">
 			<h1 className="large text-primary">Sign In</h1>
 			<p className="lead"><i className="fas fa-user"/> Sign into Your Account</p>
 			<form className="form">
@@ -27,7 +27,7 @@ const Login = () => {
 			<p className="my-1">
 				Don't have an account? <Link to="/register">Sign Up</Link>
 			</p>
-		</React.Fragment>
+		</div>
 	);
 };
 

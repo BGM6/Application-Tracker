@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 
 const Register = () => {
 	return (
-		<React.Fragment>
+		<div className="container">
 			<h1 className="large text-primary">Sign Up</h1>
 			<p className="lead"><i className="fas fa-user"/> Create Your Account</p>
 			<form className="form" action="create-profile.html">
@@ -38,7 +38,7 @@ const Register = () => {
 			<p className="my-1">
 				Already have an account? <Link to="/login">Sign In</Link>
 			</p>
-		</React.Fragment>
+		</div>
 	);
 }
 

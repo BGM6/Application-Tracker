@@ -12,12 +12,11 @@ const App = () => {
 			<React.Fragment>
 				<Navbar/>
 				<Route exact path="/" component={Landing}/>
-				<section className="container">
 					<Switch>
 						<Route exact path="/register" component={Register}/>
 						<Route exact path="/login" component={Login}/>
 					</Switch>
-				</section>
+
 			</React.Fragment>
 		</BrowserRouter>
 	);
