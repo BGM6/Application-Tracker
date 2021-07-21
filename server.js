@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 app.use('/api/users', registerUser);
-app.use('/api/users', loginUser);
+app.use('/api/auth', loginUser);
 app.use('/api/users', deleteUser)
 
 app.listen(PORT, () => console.log(`Server started on PORT ${PORT}`));

@@ -5,10 +5,10 @@ const auth = require('../../middleware/auth');
 const loginUserController = require('../../controllers/loginUserController');
 
 
-router.route('/login')
+router.route('/')
 	.get(auth, loginUserController.findUserAndAuthenticateToken);
 
-router.route('/login')
+router.route('/')
 	.post(
 		check('email', 'Please include a valid email')
 			.isEmail(),
